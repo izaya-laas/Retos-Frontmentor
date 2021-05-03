@@ -1,0 +1,161 @@
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+body{
+    background-color: var(--Violet);
+    padding:2em;
+    color: white;
+}
+@media screen and (min-width: 768px){
+    body{
+        padding: 2.5em;
+        overflow-x: hidden;
+        display: grid;
+
+        /* Defino las areas */
+        grid-template-areas: " logo . "
+                               " main main "
+                               " . footer ";
+    }
+}
+body::before{
+    content: url(/assets/bg-mobile.svg);
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+
+@media screen and (min-width: 768px){
+    body::before{
+        content: url(/assets/bg-desktop.svg);
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Logo */
+@media screen and (min-width: 768px){
+    .header{
+        grid-area: logo;
+    }
+}
+.logo{
+    max-width: 40%;
+}
+
+/* Banner */
+.banner{
+    max-width: 100%;
+    margin-top: 50px;
+}
+@media screen and (min-width:768px){
+    .banner{
+        max-width: 50%;
+    }
+}
+@media screen and (min-width: 768px){
+    .main{
+        grid-area: main;
+        display: flex;
+    }
+    .main__content{
+        box-sizing: border-box;
+        padding: 50px;
+        padding-right: 0;
+    }
+}
+.main__title{
+    margin-top: 50px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+}
+@media screen and (min-width: 768px){
+    .main__title{
+        font-size: 32px;
+        text-align: left;
+        padding-right: 50px;
+    }   
+}
+
+.main__paragraph{
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 768px){
+    .main__paragraph{
+        text-align: left;
+    }
+}
+.main__button{
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    color: var(--Violet);
+    background-color: white;
+    text-decoration:none;
+
+    width: 200px;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (min-width:768px){
+    .main__button{
+        padding: 1em;
+        margin-right: 100%;
+        margin-left: 0;
+    }
+}
+
+
+
+
+/* footer y sus iconos (facebook, twitter y instagram) */
+
+@media screen and (min-width: 768px){
+    .footer{
+        grid-area: footer;
+        display: flex;
+        justify-content: end;
+        padding-right: 2em;
+        padding-top: 2em;
+    }   
+}
+.list-icon{
+    text-align: center;
+    margin-top: 50px;
+}
+@media screen and (min-width:768px){
+    .list-icon{
+        margin-top: 0;
+        display: absolute;
+    }
+}
+ul li{
+    list-style-type: none;
+}
+.social-link{
+    color: white;
+}
+.social-icon{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px white solid;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 10px;
+}

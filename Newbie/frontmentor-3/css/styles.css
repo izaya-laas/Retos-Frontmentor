@@ -1,0 +1,143 @@
+:root{
+    --dark-cyan: #2bb3b1;
+    --cyan: #4abebd;
+    --gray: hsl(204, 43%, 93%);
+    --yellow: hsl(71, 73%, 54%);
+    --light-blue: #e6eff6;
+}
+*{
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+}
+.none{
+    display: none;
+}
+.body{
+    padding: 3em 2em;
+    background-color: var(--light-blue);
+}
+@media screen and (min-width:768px){
+    .body{
+        padding: 0;
+    }
+    *{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width:768px){
+    .main{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width:768px){
+    .welcome{
+        display: grid;
+        font-size: 1rem;
+        grid-template-columns: repeat(2, 25em);
+        grid-template-rows: 12.5em 18.75em;
+        
+    }
+}
+
+.article{          /* Altura de las cajas */
+    height: 14.0625em;
+    padding: 2em 1.25em;
+    /* font-size: 16px; */
+    /* box-sizing: border-box; */
+}
+
+/* TODA LA ZONA DEL RESUMEN */
+.welcome__resume{                /* Contenedor */
+    background: #fefefe;
+    font-size: 1rem;
+}
+@media screen and (min-width:768px){
+    .welcome__resume{
+        grid-column: 1/-1;
+    }
+}
+.welcome__title{                 /* Titulo */
+    color: var(--dark-cyan);
+    font-size: 1.25em;
+    font-weight: 700;
+}
+.paragraph-green{               /* Parrafo verde */
+    color: var(--yellow);
+    font-weight: 700;
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+}
+.paragraph-gray{                 /* Parrafo Gris */
+    color: gray;
+    line-height: 1.5625em;
+    letter-spacing: -0.01875em;
+}
+/* TERMINO LA ZONA DEL RESUMEN */
+
+
+/* TODA LA ZONA PARA UNIRSE */
+.welcome__join{                    /* Contenedor */   
+    background-color: var(--dark-cyan);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.welcome__price{                   /* Precio */
+    font-size: 1.875em;
+    font-weight: 700;
+    margin-top: 1.25em;
+    margin-bottom: .625em;
+}
+.welcome__periodicity{             /* Periocidad */
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: .625em;
+    color: var(--gray);
+}
+.paragraph-white{                   /* Parrafo */
+    margin-bottom: 2.1875em;
+    
+}
+.welcome__buttom{                   /* Boton */
+    /* Es una etiqueta tipo a, debido a que en una pagina real, esta no llevaria a un enlaze, las etiquetas de tipo buttom son para enviar formularios. */
+    display: block;
+    background-color:var(--yellow);
+    /* width: 100%; */
+    padding: 1.5rem;
+    border-radius: .3125em;
+    border: transparent;
+    /* Tipografia */
+    color:#fff;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+/* TERMINO LA ZONA PARA UNIRSE */
+
+
+/* TODA LA ZONA DE PORQUE */
+.welcome__why{
+    background-color: var(--cyan);
+    font-size: 1rem;
+}
+.welcome__subtitle{
+    color: #fff;
+    margin-bottom: 1.25em;
+    font-size: 1.25em;
+}
+.welcome__list{
+    color: var(--gray);
+    font-size: 1em;
+    list-style-type: none;
+    line-height: 1.4375em;
+}
+
+/* TERMINA LA ZONA DEL PORQUE */
